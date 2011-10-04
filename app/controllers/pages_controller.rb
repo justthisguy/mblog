@@ -1,8 +1,7 @@
 class PagesController < ApplicationController
 	
-	def init
+	def initialize
 		@main_title = 'Ruby on Rails Tutorial Sample App'
-		@page_title = ''
 	end
 	
   def home
@@ -15,6 +14,10 @@ class PagesController < ApplicationController
 
 	def about
 		@page_title = 'About'
+	end
+
+	def help
+		@page_title = 'Help'
 	end
 
 end
