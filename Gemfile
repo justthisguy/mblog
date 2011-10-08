@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+# ruby, 'ruby-1.9.2-p180'
 gem 'rails', '3.1.0'
 gem 'sqlite3'
 
@@ -14,8 +15,8 @@ group :test do
 	gem 'spork'
 	gem 'autotest'
 	gem 'autotest-rails-pure'
-	gem 'autotest-fsevent'
-	gem 'autotest-growl'
+	# gem 'autotest-fsevent'**** mac only
+	# gem 'autotest-growl'	**** mac only
 end
 
 
