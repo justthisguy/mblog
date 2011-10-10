@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
+	<head>
 		<title> <%= titleToHelpThings %></title>
-    <%= csrf_meta_tag %>
-		<%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
-		<%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
-  </head>
-  <body> 
- 		<h1>Sample App!</h1>
-		<p>
-			This is the home page for the
-			<a href = "http://railstutorial.org/">Ruby on Rails Tutorial</a>
-			sample application.
-		</p>
+		<%= csrf_meta_tag %>
+		<%= render 'layouts/stylesheets' %>
+	<body> 
+		<div class="container">
+			<%= render 'layouts/header' %>
 
-		<%=	@main_title %> | <%=	@page_title %>
- </body>
+			<section class="round">
+				<h1>Sample App!</h1>
+				<p>
+					This is the home page for the
+					<a href = "http://railstutorial.org/">Ruby on Rails Tutorial</a>
+					sample application.
+				</p>
+				<%=	link_to 'Sign up now!', '#', :class => 'signup_button round' %>				
+			</section>
+			
+			<%= render 'layouts/footer' %>
+			
+		</div>
+	</body>
 </html>
 
 
