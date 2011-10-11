@@ -11,6 +11,7 @@ describe PagesController do
   describe 'GET home' do
     it "should be successful" do
       get 'home'
+#			logger.debug "***********  this is the response #{response}"
       response.should be_success
     end
 		

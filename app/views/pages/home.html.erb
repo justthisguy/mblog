@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title> <%= titleToHelpThings %></title>
-		<%= csrf_meta_tag %>
-		<%= render 'layouts/stylesheets' %>
-	<body> 
-		<div class="container">
-			<%= render 'layouts/header' %>
 
-			<section class="round">
 				<h1>Sample App!</h1>
 				<p>
 					This is the home page for the
@@ -17,13 +7,3 @@
 				</p>
 				<%=	link_to 'Sign up now!', '#', :class => 'signup_button round' %>				
 			</section>
-			
-			<%= render 'layouts/footer' %>
-			
-		</div>
-	</body>
-</html>
-
-
-
-

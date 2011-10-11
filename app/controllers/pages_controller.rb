@@ -1,16 +1,17 @@
 class PagesController < ApplicationController
-	
-	def initialize
+
+	def initialize(*params)
+		super(*params)
 		@main_title = 'Ruby on Rails Tutorial Sample App'
 	end
-	
-  def home
-		@page_title = 'Home'
-  end
 
-  def contact
+	def home
+		@page_title = 'Home'
+	end
+
+	def contact
 		@page_title = 'Contact'
-  end
+	end
 
 	def about
 		@page_title = 'About'
