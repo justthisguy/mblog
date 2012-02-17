@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 # ruby, 'ruby-1.9.2-p180'
 gem 'rails', '3.1.0'
 gem 'sqlite3'
-
+gem 'newrelic_rpm'
 
 group :development do
 	gem 'rspec-rails'
@@ -15,8 +15,11 @@ group :test do
 	gem 'spork'
 	gem 'autotest'
 	gem 'autotest-rails-pure'
-	# gem 'autotest-fsevent'**** mac only
-	# gem 'autotest-growl'	**** mac only
+end
+
+if  RUBY_PLATFORM =~ /darwin/
+	gem 'autotest-fsevent'
+	gem 'autotest-growl'
 end
 
 
