@@ -2,11 +2,16 @@ source 'http://rubygems.org'
 
 # ruby, 'ruby-1.9.2-p180'
 gem 'rails', '3.1.0'
-gem 'sqlite3'
 gem 'newrelic_rpm'
 
-group :development do
+
+group :development, :test do
+  gem 'sqlite3'
 	gem 'rspec-rails'
+end
+
+group :production do
+  gem 'pg'
 end
 	
 group :test do
