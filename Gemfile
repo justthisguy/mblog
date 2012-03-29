@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 # ruby, 'ruby-1.9.2-p180'
 gem 'rails', '3.1.0'
+gem 'pg'
 gem 'newrelic_rpm'
 
 
@@ -10,7 +11,7 @@ gem 'newrelic_rpm'
 # end
 # 
 # group :production do
-  gem 'pg'
+#   gem 'pg'
 # end
 	
 group :test do
