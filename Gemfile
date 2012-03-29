@@ -5,13 +5,13 @@ gem 'rails', '3.1.0'
 gem 'newrelic_rpm'
 
 
-group :development, :test do
-  gem 'sqlite3'
-end
-
-group :production do
+# group :development, :test do
+#   gem 'sqlite3'
+# end
+# 
+# group :production do
   gem 'pg'
-end
+# end
 	
 group :test do
 	gem 'rspec-rails'
