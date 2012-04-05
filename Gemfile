@@ -1,37 +1,42 @@
 source 'http://rubygems.org'
 
-gem 'rake', '~> 0.9.2.2' # Temporarily trying to fix bundler errors
-gem 'rails', '~> 3.1.0'
-gem 'pg' # postgres
-gem 'rack'
-gem 'annotate' # Annotate gem for schema comments
-gem 'jquery-rails'
-gem 'haml-rails'
-gem 'sass'
-gem 'bcrypt-ruby', '2.1.4', :require => 'bcrypt' # encryption
-# gem 'silent-postgres'
-# gem 'redis-store', '~> 1.0.0'
-gem 'newrelic_rpm' # Newrelic
+# ruby, 'ruby-1.9.3-p125'
+gem 'rails', '~> 3.2.3'
+gem 'pg'
+gem 'newrelic_rpm'
 
-group 'assets' do
-  gem 'sass-rails', "3.1.5"
-  gem 'coffee-rails', "~> 3.1.0"
+	
+group :test do
+	gem 'rspec-rails'
+	gem 'webrat'
+	gem 'spork'
+	gem 'autotest'
+	gem 'autotest-rails-pure'
+end
+
+if  RUBY_PLATFORM =~ /darwin/
+	gem 'autotest-fsevent'
+	gem 'autotest-growl'
+end
+
+
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails' 
+  gem 'coffee-rails'
   gem 'uglifier'
 end
 
-group :development do
-  gem 'active_reload'
-  gem 'heroku'
-end
+gem 'jquery-rails'
 
-group :test do
-  gem 'factory_girl'
-end
+# Use unicorn as the web server
+# gem 'unicorn'
 
-group :test, :development do
-  gem 'rspec-rails'
-end
+# Deploy with Capistrano
+# gem 'capistrano'
 
-group :production do
-  gem 'thin'
-end
+# To use debugger
+# gem 'ruby-debug19', :require => 'ruby-debug'
+
