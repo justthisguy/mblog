@@ -2,10 +2,12 @@ source 'http://rubygems.org'
 
 # ruby, 'ruby-1.9.3-p125'
 gem 'rails', '~> 3.2.3'
-gem 'pg'
 gem 'newrelic_rpm'
 
-	
+group :development, :production do
+  gem 'pg'
+end
+
 group :test do
 	gem 'rspec-rails'
 	gem 'webrat'
