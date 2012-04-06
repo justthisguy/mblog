@@ -17,7 +17,7 @@ group :test do
 end
 
 group :development, :test do
-  if  RUBY_PLATFORM =~ /darwin/
+  if RUBY_PLATFORM.downcase.include?('darwin')
     gem 'autotest-fsevent'
     gem 'autotest-growl'
   end
