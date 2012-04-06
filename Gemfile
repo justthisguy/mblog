@@ -16,11 +16,12 @@ group :test do
 	gem 'autotest-rails-pure'
 end
 
-if  RUBY_PLATFORM =~ /darwin/
-	gem 'autotest-fsevent'
-	gem 'autotest-growl'
+group :development, :test do
+  if  RUBY_PLATFORM =~ /darwin/
+  	gem 'autotest-fsevent'
+  	gem 'autotest-growl'
+  end
 end
-
 
 
 # Gems used only for assets and not required
